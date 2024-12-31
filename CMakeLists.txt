@@ -19,6 +19,8 @@ set_target_properties(test1 PROPERTIES LINK_FLAGS
     "-gsource-map 
     -lembind 
     --emit-tsd test1.d.ts 
+    --pre-js ${CMAKE_CURRENT_LIST_DIR}/wasm-build/pre.js 
+    --post-js ${CMAKE_CURRENT_LIST_DIR}/wasm-build/post.js 
     -s EXPORT_NAME=Test1Module 
     -s JSPI 
     -s STRICT 

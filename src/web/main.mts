@@ -1,13 +1,13 @@
-import Test1ModuleFactory from '@wasm/test1';
+import initTest1 from '@wasm/test1';
+
+await initTest1();
 
 async function main() {
-  const Test1Module = await Test1ModuleFactory();
-
-  console.log(Test1Module.execute());
+  console.log(globalThis.Test1Module.execute());
 
   const result = await Test1Module.executeAsync();
 
   console.log(result);
 }
 
-void main()
+await main()

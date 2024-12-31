@@ -1,0 +1,1 @@
+globalThis['Test1Module'] = (function() {
