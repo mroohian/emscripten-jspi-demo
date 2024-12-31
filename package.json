@@ -1,0 +1,23 @@
+{
+  "name": "emscripten-jspi-demo",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "cmake:prepare": "node --experimental-strip-types --no-warnings scripts/prepare.mts",
+    "cmake:remove": "rimraf build.em",
+    "cmake:clean": "cd build.em && ninja clean",
+    "cmake:build": "cd build.em && ninja",
+    "build": "npm run cmake:prepare && npm run cmake:clean && npm run cmake:build",
+    "rebuild": "npm run cmake:remove && npm run build",
+    "serve": "vite",
+    "serve:emscripten": "node build/test1.js"
+  },
+  "author": "Reza",
+  "license": "MIT",
+  "description": "Demo JSPI+Emscripten+Vite and source map",
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "rimraf": "^6.0.1",
+    "vite": "^6.0.6"
+  }
+}
