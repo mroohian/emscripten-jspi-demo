@@ -10,4 +10,4 @@ async function main() {
   console.log(result);
 }
 
-await main()
+await main();

@@ -21,6 +21,7 @@ set_target_properties(test1 PROPERTIES LINK_FLAGS
     --emit-tsd test1.d.ts 
     --pre-js ${CMAKE_CURRENT_LIST_DIR}/wasm-build/pre.js 
     --post-js ${CMAKE_CURRENT_LIST_DIR}/wasm-build/post.js 
+    --js-library ${CMAKE_CURRENT_LIST_DIR}/wasm-build/js-library.js 
     -s EXPORT_NAME=Test1Module 
     -s JSPI 
     -s STRICT 

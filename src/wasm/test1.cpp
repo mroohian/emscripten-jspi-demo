@@ -3,12 +3,14 @@
 #include <emscripten/bind.h>
 
 #include "calc.hpp"
+#include "js-library.hpp"
 
 int execute() {
     int a = add(1,2);
     int b = sub(2,1);
     
     std::cout << "1+2 => " << a << std::endl;
+    my_js();
     std::cout << "2-1 => " << b << std::endl;
     
     if (a != 3) {
