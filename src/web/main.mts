@@ -1,6 +1,6 @@
 import initTest1 from '@wasm/test1';
 
-await initTest1();
+globalThis.Test1Module = await initTest1();
 
 async function main() {
   console.log(globalThis.Test1Module.execute());

@@ -2,13 +2,14 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
+    "moduleResolution": "Node",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "dist",
     "paths": {
-      "@wasm/*": ["./build.em/*"]
+      "@wasm/*": ["./build.em/Current/*"]
     },
     "rootDir": "./src"
   },

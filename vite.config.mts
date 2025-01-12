@@ -4,10 +4,8 @@ import topLevelAwait from "vite-plugin-top-level-await";
 export default defineConfig({
   resolve: {
     alias: {
-      '@wasm': '/build.em',
+      '@wasm': '/build.em/Current',
     },
   },
-  plugins: [
-    topLevelAwait()
-  ]
+  plugins: [topLevelAwait()]
 });
